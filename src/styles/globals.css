@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+  background: #040310;
+  color: #f5f5f3;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.page-root {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(12, 74, 110, 0.55), transparent 55%),
+    radial-gradient(circle at 100% 0%, rgba(180, 83, 9, 0.4), transparent 55%),
+    radial-gradient(circle at 50% 100%, rgba(15, 23, 42, 0.95), #020617 70%);
+  color: #f5f5f3;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+.hero-highlight {
+  color: #fbbf24;
+}
+
+.button {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 0.5rem 1.3rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease,
+    transform 0.16s ease, box-shadow 0.16s ease;
+  white-space: nowrap;
+}
+
+.button.primary {
+  background: #fbbf24;
+  color: #02101a;
+}
+
+.button.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+.button.ghost {
+  border-color: rgba(148, 163, 184, 0.9);
+  background: transparent;
+  color: #e5e7eb;
+}
+
+.button.ghost:hover {
+  border-color: #fbbf24;
+  color: #fbbf24;
+}
+
+.button.subtle {
+  border-color: transparent;
+  background: rgba(15, 23, 42, 0.9);
+  color: #dddcdc;
+}
+
+.button.subtle:hover {
+  background: rgba(245, 245, 243, 0.12);
+}
+
+.button.full {
+  width: 100%;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 245, 243, 0.15);
+  font-size: 0.75rem;
+  color: #dddcdc;
+  margin-right: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.cursor-trail-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+}
+
+.cursor-dot {
+  position: absolute;
+  width: 4px;
+  height: 22px;
+  border-radius: 999px;
+  background: linear-gradient(to top, #0f172a, #fbbf24);
+  opacity: 0.6;
+  transform: translate(-50%, -50%) scaleY(0.3);
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+  mix-blend-mode: lighten;
+}
+
