@@ -107,7 +107,7 @@ const Hero = () => {
         <div className="hero-right">
           <div className="hero-cassette-wrap">
             <img
-              src="/images/cassette.png"
+              src="/cassette.png"
               alt="Cassette illustration"
               className="hero-cassette-img"
             />
